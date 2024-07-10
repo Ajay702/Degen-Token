@@ -44,6 +44,24 @@ Once deployed, you can interact with the contract using the Remix interface:
 
 You can view transactions associated with your deployed contract on the SnowTrace testnet by copying and pasting your contract address into the SnowTrace explorer.
 
+# Additional Steps
+
+## Test the Smart Contract (All tests should pass)
+
+Before deploying to a testnet, ensure all functionalities of the smart contract are tested thoroughly using a Solidity testing framework like Truffle or Remix's testing suite.
+
+## Deploy the Contract to Avalanche Fuji Testnet
+
+Deploy the `DegenGamingToken` contract to the Avalanche Fuji Testnet to ensure compatibility and functionality on the Avalanche blockchain.
+
+## Test on Testnet (All tests should pass)
+
+After deployment to Avalanche Fuji Testnet or any other Ethereum-compatible testnet, perform comprehensive tests to verify all functionalities are working as expected.
+
+## Verify the Smart Contract on Snowtrace
+
+After deployment to a live network, such as Avalanche Mainnet or Ethereum Mainnet, verify the smart contract on Snowtrace to provide transparency and trust to users.
+
 # Help
 
 ## Common Issues
