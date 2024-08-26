@@ -2,76 +2,43 @@
 
 ## Overview
 
-DegenGamingToken (DGT) is a custom ERC20 token designed for gaming purposes, with minting, redeeming, and burning functionalities. It allows the owner to mint new tokens and provides mechanisms for users to redeem or burn their tokens.
+DegenGamingToken (DGT) is an ERC20 token designed for gaming purposes. It includes functionalities for minting, redeeming, and burning tokens, with ownership control managed by the OpenZeppelin `Ownable` contract.
 
-## Description
+## Contract Description
 
-DegenGamingToken is a Solidity-based smart contract that extends the OpenZeppelin ERC20 implementation. It includes ownership control, enabling only the contract owner to mint new tokens. Users can redeem and burn their tokens, providing flexibility for various gaming scenarios.
+- **Name**: DegenGamingToken
+- **Symbol**: DGT
 
-# Getting Started
+The contract extends the ERC20 standard and provides additional functionalities:
+- **Minting**: The owner can mint new tokens.
+- **Item Costs**: The owner can set and manage the cost of in-game items.
+- **Redeeming**: Users can redeem items or tokens based on the item costs or directly by amount.
+- **Burning**: Users can burn their tokens to reduce their balance.
+- **Balance Check**: Users can check their token balance.
 
-## Installing and Setting Up Remix
+## Getting Started
 
 ### Setup
 
-1. **Open Remix**: Go to [Remix](https://remix.ethereum.org/).
-2. **Create a New File**: Click on the "File Explorers" icon, then click on the "+" button to create a new file, and name it `DegenGamingToken.sol`.
-3. **Copy the Contract Code**: Copy the code provided into your new file.
+1. **Open Remix**: Visit [Remix](https://remix.ethereum.org/).
+2. **Create a New File**: Create a new file named `DegenGamingToken.sol` and paste the contract code provided.
 
-## Compiling the Contract
+### Compile
 
-1. **Select the Compiler**: On the left sidebar, click on the "Solidity Compiler" tab.
-2. **Choose the Correct Version**: Ensure the compiler version is set to `0.8.20` (or compatible with your Solidity code).
-3. **Compile the Contract**: Click on the "Compile DegenGamingToken.sol" button.
+1. **Select the Compiler**: Choose the version `0.8.20` in the "Solidity Compiler" tab.
+2. **Compile**: Click "Compile DegenGamingToken.sol".
 
-## Deploying the Contract
+### Deploy
 
-1. **Select the Deploy & Run Transactions Tab**: On the left sidebar, click on the "Deploy & Run Transactions" tab.
-2. **Environment Selection**: Select the appropriate environment (e.g., "JavaScript VM" for local testing).
-3. **Deploy the Contract**: In the "Deploy" section, ensure `DegenGamingToken` is selected, then click the "Deploy" button.
+1. **Deploy & Run**: In the "Deploy & Run Transactions" tab, select the environment (e.g., "JavaScript VM") and deploy the contract.
 
-## Interacting with the Contract
+### Interact
 
-Once deployed, you can interact with the contract using the Remix interface:
-
-- **Minting Tokens**: Use the `mint` function, providing the recipient address and the amount to mint. Example: `mint("0xYourAddress", 1000)`
-- **Redeeming Tokens**: Use the `redeem` function, specifying the amount to redeem. Example: `redeem(100)`
-- **Burning Tokens**: Use the `burn` function, specifying the amount to burn. Example: `burn(100)`
-- **Transferring Tokens**: Use the `transferFrom` function, specifying the from address, to address, and amount to transfer. Example: `transferFrom("0xFromAddress", "0xToAddress", 100)`
-- **Checking Balance**: Use the `getBalance` function, providing the account address. Example: `getBalance("0xYourAddress")`
-
-## Viewing Transactions on SnowTrace Testnet
-
-You can view transactions associated with your deployed contract on the SnowTrace testnet by copying and pasting your contract address into the SnowTrace explorer.
-
-# Additional Steps
-
-## Test the Smart Contract (All tests should pass)
-
-Before deploying to a testnet, ensure all functionalities of the smart contract are tested thoroughly using a Solidity testing framework like Truffle or Remix's testing suite.
-
-## Deploy the Contract to Avalanche Fuji Testnet
-
-Deploy the `DegenGamingToken` contract to the Avalanche Fuji Testnet to ensure compatibility and functionality on the Avalanche blockchain.
-
-## Test on Testnet (All tests should pass)
-
-After deployment to Avalanche Fuji Testnet or any other Ethereum-compatible testnet, perform comprehensive tests to verify all functionalities are working as expected.
-
-## Verify the Smart Contract on Snowtrace
-
-After deployment to a live network, such as Avalanche Mainnet or Ethereum Mainnet, verify the smart contract on Snowtrace to provide transparency and trust to users.
-
-# Help
-
-## Common Issues
-
-- **Compilation Errors**: Ensure all necessary imports are correctly configured and the Solidity version matches.
-- **Deployment Errors**: Ensure the selected environment is correct and there are no issues with the network.
-
-## Command for Help
-
-If you need assistance or more information, refer to the Remix documentation or use the built-in help functions in Remix.
+- **Mint Tokens**: Use the `mint` function to create new tokens for a specified address.
+- **Set Item Costs**: Use the `setItemCost` function to define the cost of in-game items.
+- **Redeem Items**: Use the `redeem` function to exchange tokens for in-game items or burn tokens based on amount.
+- **Burn Tokens**: Use the `burn` function to reduce the number of tokens in your balance.
+- **Check Balance**: Use the `getBalance` function to view the token balance of an address.
 
 # Authors
 
